@@ -1,0 +1,35 @@
+{
+  "/schedule": [
+    {
+      "status": 200,
+      "file": "schedule.ics",
+      "headers": {
+        "ETag": "v1"
+      }
+    }
+  ],
+  "/move": [
+    {
+      "status": 200,
+      "file": "reschedule.ics"
+    }
+  ],
+  "/cancel": [
+    {
+      "status": 200,
+      "file": "cancel.ics"
+    }
+  ],
+  "/replay": [
+    {
+      "status": 200,
+      "file": "replays.ics"
+    }
+  ],
+  "/ambiguous": [
+    {
+      "status": 200,
+      "file": "ambiguous.ics"
+    }
+  ]
+}

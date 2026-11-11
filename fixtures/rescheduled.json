@@ -1,0 +1,14 @@
+{
+  "name": "rescheduled",
+  "run_id": "run-rescheduled",
+  "sources": [
+    "/schedule",
+    "/move",
+    "/replay"
+  ],
+  "options": {
+    "matching": "explicit_only"
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

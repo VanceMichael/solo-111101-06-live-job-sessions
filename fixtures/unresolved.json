@@ -1,0 +1,13 @@
+{
+  "name": "unresolved",
+  "run_id": "run-unresolved",
+  "sources": [
+    "/schedule",
+    "/ambiguous"
+  ],
+  "options": {
+    "matching": "explicit_only"
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

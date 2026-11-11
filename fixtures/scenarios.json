@@ -1,0 +1,94 @@
+[
+  {
+    "name": "rescheduled",
+    "run_id": "run-rescheduled",
+    "sources": [
+      "/schedule",
+      "/move",
+      "/replay"
+    ],
+    "options": {
+      "matching": "explicit_only"
+    },
+    "expected": {
+      "sessions": [
+        {
+          "uid": "LIVE-A",
+          "sequence": 2,
+          "start": "20261112T010000Z"
+        }
+      ],
+      "replays": [
+        {
+          "uid": "REPLAY-OLD",
+          "session": "LIVE-A",
+          "session_sequence": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "cancel",
+    "run_id": "run-cancel",
+    "sources": [
+      "/schedule",
+      "/replay",
+      "/cancel"
+    ],
+    "options": {
+      "matching": "explicit_only"
+    },
+    "expected": {
+      "sessions": [
+        {
+          "uid": "LIVE-A",
+          "state": "cancelled"
+        }
+      ],
+      "replays": [
+        {
+          "uid": "REPLAY-OLD",
+          "session_sequence": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "unresolved",
+    "run_id": "run-unresolved",
+    "sources": [
+      "/schedule",
+      "/ambiguous"
+    ],
+    "options": {
+      "matching": "explicit_only"
+    },
+    "expected": {
+      "unresolved": [
+        {
+          "uid": "REPLAY-X",
+          "reason": "missing_session_revision"
+        }
+      ]
+    }
+  },
+  {
+    "name": "late",
+    "run_id": "run-late",
+    "sources": [
+      "/move",
+      "/schedule"
+    ],
+    "options": {
+      "matching": "explicit_only"
+    },
+    "expected": {
+      "sessions": [
+        {
+          "uid": "LIVE-A",
+          "sequence": 2
+        }
+      ]
+    }
+  }
+]

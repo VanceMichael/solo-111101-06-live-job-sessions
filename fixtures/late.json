@@ -1,0 +1,13 @@
+{
+  "name": "late",
+  "run_id": "run-late",
+  "sources": [
+    "/move",
+    "/schedule"
+  ],
+  "options": {
+    "matching": "explicit_only"
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}
